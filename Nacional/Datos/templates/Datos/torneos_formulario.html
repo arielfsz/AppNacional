@@ -1,0 +1,25 @@
+{% extends 'Datos/padre.html' %}
+
+
+{% block contenido %}
+
+                            <h1 class="mb-5">Torneos</h1>
+                            <h2>Listado de Torneos ganados por el Club Nacional de Football.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+<form action="/datos/torneos/crear/" method="post">
+
+    <form action="" method="post">
+        {% csrf_token %}
+    
+        {{ formulario.as_p }}
+    
+        <input type="submit" value="Cargar Torneo">
+    
+    </form>
+    
+    {% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'Datos/padre.html' %}
+
+
+{% block contenido %}
+
+                            <h1 class="mb-5">Futbolistas</h1>
+                            <h2>Listado de jugadores del Club Nacional de Football.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+<form action="/datos/futbolistas/buscar/" method="post">
+
+    <ul>
+        {% for futbolista in Futbolista %}
+        <li>{{Futbolista.nombre}} - {{Futbolista.apellido}} - {{Futbolista.nacimiento}} - {{Futbolista.posicion}}</li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}

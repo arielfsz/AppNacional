@@ -1,0 +1,25 @@
+{% extends 'Datos/padre.html' %}
+
+
+{% block contenido %}
+
+                            <h1 class="mb-5">Futbolistas</h1>
+                            <h2>Listado de jugadores del Club Nacional de Football.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+<form action="{% url 'resultados_buscar_futbolista' %}" method="get">
+
+    <p>
+        Nombre del jugador: <input type="text" name="nombre_jugador">
+        <input type="submit" value="Buscar">
+    </p>
+
+</form>
+
+{% endblock %}
+

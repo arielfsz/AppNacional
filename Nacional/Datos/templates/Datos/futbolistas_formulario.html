@@ -1,0 +1,26 @@
+{% extends 'Datos/padre.html' %}
+
+
+{% block contenido %}
+
+                            <h1 class="mb-5">Futbolistas</h1>
+                            <h2>Listado de jugadores del Club Nacional de Football.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+<form action="/datos/futbolistas/crear/" method="post">
+ 
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    {{ formulario.as_p }}
+
+    <input type="submit" value="Cargar Futbolista">
+
+</form>
+
+{% endblock %}
