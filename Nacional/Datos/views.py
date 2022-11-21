@@ -81,7 +81,4 @@ def buscar_futbolista(request):
 def resultados_buscar_futbolista(request):
     nombre_futbolista = request.GET["nombre_jugador"]
     futbolistas = Futbolista.objects.filter(apellido__contains=nombre_futbolista)
-    print("******************************************")
-    print(futbolistas.values("nacimiento"))
-    print("******************************************")
     return render(request, "Datos/resultados_buscar_futbolista.html", {"futbolistas":futbolistas})
