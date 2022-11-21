@@ -5,14 +5,14 @@ class FutbolistaFormulario(forms.Form):
 
     nombre = forms.CharField()
     apellido = forms.CharField()
-    nacimiento = forms.DateField()
+    nacimiento = forms.DateField(widget=forms.TextInput(attrs={'class': 'input', 'type':'date'}))
     posicion = forms.CharField()
 
 class TecnicoFormulario(forms.Form):
 
     nombre = forms.CharField()
     apellido = forms.CharField()
-    nacimiento = forms.DateField()
+    nacimiento = forms.DateField(widget=forms.TextInput(attrs={'class': 'input', 'type':'date'}))
 
 class TorneoFormulario(forms.Form):
 

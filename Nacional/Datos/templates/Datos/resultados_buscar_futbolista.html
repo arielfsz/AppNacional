@@ -14,8 +14,8 @@
 <form action="/datos/futbolistas/buscar/" method="post">
 
     <ul>
-        {% for futbolista in Futbolista %}
-        <li>{{Futbolista.nombre}} - {{Futbolista.apellido}} - {{Futbolista.nacimiento}} - {{Futbolista.posicion}}</li>
+        {% for futbolista in futbolistas %}
+        <li>{{futbolista.nombre}} {{futbolista.apellido}} - {{futbolista.nacimiento}} - {{futbolista.posicion}}</li>
         {% endfor %}
     </ul>
 

@@ -16,7 +16,7 @@ def futbolistas(request):
 def creacion_futbolistas(request):
     if request.method == "POST":
         formulario = FutbolistaFormulario(request.POST)
-
+               
         if formulario.is_valid():
             data=formulario.cleaned_data
 
@@ -79,6 +79,9 @@ def buscar_futbolista(request):
 
 
 def resultados_buscar_futbolista(request):
-    nombre_futbolista = request.GET["nombre_futbolista"]
-    futbolistas = Futbolista.objects.filter(apellido__icontaines=nombre_futbolista)
+    nombre_futbolista = request.GET["nombre_jugador"]
+    futbolistas = Futbolista.objects.filter(apellido__contains=nombre_futbolista)
+    print("******************************************")
+    print(futbolistas.values("nacimiento"))
+    print("******************************************")
     return render(request, "Datos/resultados_buscar_futbolista.html", {"futbolistas":futbolistas})
